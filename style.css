@@ -1,0 +1,66 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  box-sizing: border-box;
+  text-align: center;
+  padding: 30px;
+}
+
+h1, p {
+  margin-bottom: 20px;
+}
+
+#board .grid-col {
+  display: inline-block;
+  width: 50px;
+	height: 50px;
+  background-color: rgba(98, 140, 219, 0.7);
+  border: solid 1px rgb(72, 124, 219);
+  transition-property: background-color;
+  transition-duration: 0.2s;
+}
+
+#board .grid-col:hover {
+  background-color: rgba(89, 126, 196, 0.8);
+}
+
+#board .hit-ship {
+  background-image: url(images/ship-sink.png);
+  background-size: cover;
+  background-position: center;
+}
+
+#board .miss-ship {
+  background-color: rgba(192, 0, 0, 0.6);
+}
+
+#board .miss-ship:hover {
+  background-color: rgba(165, 0, 0, 0.7);
+}
+
+.score-container {
+  margin-top: 30px;
+}
+
+#ships-left, #turns-left {
+  font-size: 30px;
+  font-weight: 600;
+  color: rgb(245, 116, 57);
+}
+
+.win, .lose {
+  display: none;
+  font-size: 50px;
+  font-family: fantasy;
+  color: red;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -60%);
+  letter-spacing: 5px;
+  text-transform: uppercase
+}
